@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: url(../images/background/bg7.jpg);
+    background-size: cover;
+    z-index: -4;
+}
+
+section {
+    height: 100vh;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+}
+
+.main {
+    /* z-index: -1; */
+    transform-origin: center;
+    min-height: 100vh;
+    background-image: url('../images/background/blya1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+.brief {
+    display:inline-block;
+    position: relative;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    bottom: 35%;
+    right: 15%;
+}
+
+.social {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    width: 30%;
+    margin: 20px;
+}
+
+.footer {
+    height: 0;
+}
+
+@media (orientation: landscape) {
+    section {
+        scroll-snap-align: start;
+    }
+
+    .container {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+    }
+}
+
+@media (orientation: portrait) {
+    .main {
+        background-image: url('../images/background/blya2.jpg');
+        background-size: contain;
+    }
+
+    .social {
+        left: 85%;
+    }
+
+    .social-icon {
+        width: 40%;
+        margin: 20px;
+    }
+}
+
+@media (orientation: portrait) and (width < 767px) {
+    .main {
+        background-image: url('../images/background/blya4.jpg');
+        background-size: contain;
+    }
+
+    .social {
+        top: 90%;
+        left: 0%;
+        right: 0%;
+        flex-direction: row;
+    }
+
+    .social-icon {
+        width: 50%;
+        margin: 20px;
+    }
+}

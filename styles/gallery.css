@@ -1,0 +1,68 @@
+.gallery {
+    position: relative;
+    overflow: scroll;
+}
+
+.gallery h3 {
+    padding-top: 20px;
+    font-size: 60px;
+}
+
+.image-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 90%;
+    top: 5%;
+}
+
+.image {
+    height: 60%;
+    object-fit: cover; 
+    transition: 1s;
+    object-position: center;
+}
+
+.box {
+    flex: 1;
+    overflow: hidden;
+    transition: 1s;
+    margin: 0 2px;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (orientation: landscape) {
+    .box:hover { flex: 1 1 10%; }
+
+    .box:hover > .image {
+        height: 90%;
+    }
+    
+    .box:not(:hover) > .image {
+        height: 60%;
+    }
+}
+
+@media (orientation: portrait) and (width <= 565px) {
+    .image-track {
+        height: 95%;
+        top: 5%;
+    }
+    
+    .image {
+        height: 85%;
+    }
+    
+    .box {
+        height: 85%;
+    }
+
+    .gallery {
+        background-size: contain;
+        background-position: no-repeat;
+    }
+}

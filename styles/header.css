@@ -1,0 +1,100 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 60;
+}
+
+.nav-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.nav-menu input {
+    height: 20px;
+    width: 20px;
+    opacity: 0;
+}
+
+.menu {
+    overflow: hidden;
+    width: 0;
+    transition: 0.5s;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.menu ul li a {
+    color: whitesmoke;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 80%;
+    font-family: 'Comfortaa', cursive;
+}
+
+.nav-menu input:checked ~ .menu {
+    width: 550px;
+}
+
+.nav-menu span {
+    position: absolute;
+    left: 20px;
+    width: 20px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    pointer-events: none;
+    transition: 0.5s;
+    /* z-index: 60; */
+}
+
+.menu ul li a:hover {
+    color:rgb(212, 48, 48);
+    transition: 0.5s;
+}
+
+.menu ul li a:not(:hover) {
+    color:whitesmoke;
+    transition: 1s;
+}
+
+.nav-menu input:checked ~ span {
+    background-color: rgb(212, 48, 48);
+}
+
+.nav-menu span:nth-child(2) {
+    transform: translateY(-8px);
+}
+
+.nav-menu input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.nav-menu span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.nav-menu input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+
+@media (orientation: portrait) and (width <= 767px) {
+    .menu ul li a {
+        font-size: 3vmin;
+    }
+}
