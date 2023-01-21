@@ -31,10 +31,10 @@ section {
 }
 
 .anirameen {
-    max-width: 40vmin;
+    max-width: 55vmin;
     position: absolute;
     top: 80%;
-    left: 15%;
+    left: 10%;
 }
 
 .brief {
@@ -47,7 +47,9 @@ section {
 }
 
 .brief p {
+    font-size: 18px;
     font-family: 'Comfortaa', cursive;
+    font-weight: bold;
 }
 
 .social {
@@ -115,19 +117,19 @@ section {
         position: absolute;
         padding: 10px;
         color: rgb(255, 255, 255);
-        top: 70%;
-        left: 50%;
+        top: 75%;
+        left: 25%;
     }
 
     .brief p {
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .anirameen {
-        max-width: 40vmin;
+        max-width: 50vmin;
         position: absolute;
-        top: 15%;
-        left: 10%;
+        top: 6%;
+        left: 7%;
     }
 }
 
@@ -150,9 +152,9 @@ section {
     }
 
     .anirameen {
-        max-width: 40vmin;
+        max-width: 70vmin;
         position: absolute;
-        top: 15%;
+        top: 10%;
         left: 15%;
     }
 
@@ -161,7 +163,11 @@ section {
         position: absolute;
         padding: 10px;
         color: rgb(255, 255, 255);
-        top: 70%;
-        left: 30%;
+        top: 80%;
+        left: 15%;
+    }
+
+    .brief p {
+        font-size: 18px;
     }
 }
