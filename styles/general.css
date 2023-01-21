@@ -109,6 +109,28 @@ section {
     }
 }
 
+@media (orientation: portrait) {
+    .brief {
+        display:inline-block;
+        position: absolute;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        top: 70%;
+        left: 50%;
+    }
+
+    .brief p {
+        font-size: 15px;
+    }
+
+    .anirameen {
+        max-width: 40vmin;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+    }
+}
+
 @media (max-width: 480px) {
     .main {
         background-image: url('../images/background/smartphone_2.jpg');
@@ -125,5 +147,21 @@ section {
     .social-icon {
         width: 40%;
         margin: 20px;
+    }
+
+    .anirameen {
+        max-width: 40vmin;
+        position: absolute;
+        top: 15%;
+        left: 15%;
+    }
+
+    .brief {
+        display:inline-block;
+        position: absolute;
+        padding: 10px;
+        color: rgb(255, 255, 255);
+        top: 70%;
+        left: 30%;
     }
 }
