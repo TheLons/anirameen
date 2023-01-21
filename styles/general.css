@@ -21,23 +21,33 @@ section {
 }
 
 .main {
-    /* z-index: -1; */
     transform-origin: center;
     min-height: 100vh;
-    background-image: url('../images/background/blya1.png');
-    background-position: center;
+    background-image: url('../images/background/desktop_3.jpg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto 80%;
+    background-position: center;
     position: relative;
+}
+
+.anirameen {
+    max-width: 40vmin;
+    position: absolute;
+    top: 80%;
+    left: 15%;
 }
 
 .brief {
     display:inline-block;
-    position: relative;
+    position: absolute;
     padding: 10px;
     color: rgb(255, 255, 255);
-    bottom: 35%;
-    right: 15%;
+    top: 70%;
+    left: 65%;
+}
+
+.brief p {
+    font-family: 'Comfortaa', cursive;
 }
 
 .social {
@@ -60,7 +70,7 @@ section {
     height: 0;
 }
 
-@media (orientation: landscape) {
+/* @media (orientation: landscape) {
     section {
         scroll-snap-align: start;
     }
@@ -71,10 +81,11 @@ section {
     }
 }
 
-@media (orientation: portrait) {
+@media (min-width: 481px) and (max-width: 850px) {
     .main {
-        background-image: url('../images/background/blya2.jpg');
-        background-size: contain;
+        background-image: url('../images/background/box.png');
+        background-size: cover;
+        background-position: center;
     }
 
     .social {
@@ -85,12 +96,23 @@ section {
         width: 40%;
         margin: 20px;
     }
+} */
+
+@media (any-hover: hover) {
+    section {
+        scroll-snap-align: start;
+    }
+
+    .container {
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+    }
 }
 
-@media (orientation: portrait) and (width < 767px) {
+@media (max-width: 480px) {
     .main {
-        background-image: url('../images/background/blya4.jpg');
-        background-size: contain;
+        background-image: url('../images/background/smartphone_2.jpg');
+        background-size: cover;
     }
 
     .social {
@@ -101,7 +123,7 @@ section {
     }
 
     .social-icon {
-        width: 50%;
+        width: 40%;
         margin: 20px;
     }
 }

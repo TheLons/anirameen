@@ -1,11 +1,21 @@
 .gallery {
     position: relative;
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.gallery h3 {
-    padding-top: 20px;
-    font-size: 60px;
+.track {
+    position: relative;
+    overflow: scroll;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
 }
 
 .image-track {
@@ -13,12 +23,13 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    height: 90%;
+    overflow: scroll;
+    height: 80%;
     top: 5%;
 }
 
 .image {
-    height: 60%;
+    height: 70%;
     object-fit: cover; 
     transition: 1s;
     object-position: center;
@@ -29,28 +40,41 @@
     overflow: hidden;
     transition: 1s;
     margin: 0 2px;
-    height: 80%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@media (orientation: landscape) {
-    .box:hover { flex: 1 1 10%; }
+.gallery-swipe {
+    background-color: aqua;
+    position: relative;
+    height: 15%;
+}
+
+.arrow {
+    max-width: 30%;
+}
+
+@media (any-hover: hover) {
+    .box:hover { flex: 1 1 5%; }
 
     .box:hover > .image {
-        height: 90%;
+        height: 100%;
     }
     
     .box:not(:hover) > .image {
-        height: 60%;
+        height: 70%;
     }
 }
 
-@media (orientation: portrait) and (width <= 565px) {
+@media (max-width: 480px) {
+    .track {
+        height: 100%;
+    }
+
     .image-track {
-        height: 95%;
-        top: 5%;
+        height: 90%;
     }
     
     .image {
@@ -58,10 +82,11 @@
     }
     
     .box {
-        height: 85%;
+        height: 100%;
     }
 
     .gallery {
+        height: 80vh;
         background-size: contain;
         background-position: no-repeat;
     }

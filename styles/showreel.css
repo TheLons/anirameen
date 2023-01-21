@@ -72,7 +72,7 @@
 }
 
 
-@media (orientation: portrait) and (width < 476px) {
+@media (max-width: 480px) {
     .showreel {
         flex-direction: column-reverse;
         justify-content: center;

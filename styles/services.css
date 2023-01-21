@@ -1,24 +1,23 @@
 .services {
     min-height: 100vh;
     height: auto;
-    position: absolute;
+    position: relative;
+    margin-top: 10%;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.services-box {
-    position: relative;
-}
-
 .service {
-    width: 350px;
-    height: 600px;
-    margin: 30px;
+    max-width: 350px;
+    max-height: 600px;
     padding: 30px;
     color: whitesmoke;
+    position: relative;
+    margin-top: 6%;
+    margin-bottom: 10%;
 }
 
 .service p {

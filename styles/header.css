@@ -44,7 +44,7 @@ header {
     color: whitesmoke;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 80%;
+    font-size: 15px;
     font-family: 'Comfortaa', cursive;
 }
 
@@ -64,8 +64,13 @@ header {
     /* z-index: 60; */
 }
 
+@media (any-hover: hover) {
+    .menu ul li a:hover {
+        color:rgb(212, 48, 48);
+    }
+}
+
 .menu ul li a:hover {
-    color:rgb(212, 48, 48);
     transition: 0.5s;
 }
 
@@ -93,7 +98,7 @@ header {
     transform: translateY(0) rotate(45deg);
 }
 
-@media (orientation: portrait) and (width <= 767px) {
+@media (max-width: 480px) {
     .menu ul li a {
         font-size: 3vmin;
     }
