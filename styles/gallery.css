@@ -56,7 +56,7 @@
     max-width: 30%;
 }
 
-@media (any-hover: hover) {
+@media(hover: hover) and (pointer: fine) {
     .box:hover { flex: 1 1 5%; }
 
     .box:hover > .image {
