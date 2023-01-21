@@ -64,7 +64,7 @@ header {
     /* z-index: 60; */
 }
 
-@media (any-hover: hover) {
+@media(hover: hover) and (pointer: fine) {
     .menu ul li a:hover {
         color:rgb(212, 48, 48);
     }
