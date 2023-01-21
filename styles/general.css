@@ -98,7 +98,7 @@ section {
     }
 } */
 
-@media (any-hover: hover) {
+@media(hover: hover) and (pointer: fine) {
     section {
         scroll-snap-align: start;
     }
