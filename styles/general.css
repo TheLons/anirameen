@@ -55,21 +55,43 @@ section {
     position: absolute;
     top: 0%;
     bottom: 0%;
-    left: 90%;
+    left: 80%;
+    right: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .social-icon {
-    width: 30%;
-    margin: 20px;
+    width: 18px;
 }
 
 .footer {
-    height: 15px;
+    font-family: 'Comfortaa', cursive;
+    height: 100px;
     width: 100%;
+    color: whitesmoke;
+    padding: 15px;
+}
+
+.contacts {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-2 {
+    width: 60%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-icon-2 {
+    width: 35px;
 }
 
 .anirameen-design {
@@ -94,8 +116,17 @@ section {
     .anirameen {
         max-width: 50vmin;
         position: absolute;
-        top: 6%;
+        top: 8%;
         left: 7%;
+    }
+
+    .social {
+        left: 85%;
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        width: 18px;
     }
 }
 
@@ -106,6 +137,7 @@ section {
     }
 
     .social {
+        display: none;
         top: 90%;
         left: 0%;
         right: 0%;
@@ -135,5 +167,20 @@ section {
 
     .brief p {
         font-size: 18px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .social-2 {
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .social-icon-2 {
+        width: 25px;
     }
 }
