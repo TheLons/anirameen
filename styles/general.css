@@ -163,6 +163,8 @@ section {
         color: rgb(255, 255, 255);
         top: 80%;
         left: 15%;
+        /* background-color: #121212; */
+        backdrop-filter: blur(15px);
     }
 
     .brief p {

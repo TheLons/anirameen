@@ -10,6 +10,13 @@ header {
     z-index: 60;
 }
 
+.logo {
+    width: 40px;
+    position: absolute;
+    left: 5%;
+    top: 25%;
+}
+
 .nav-menu {
     position: relative;
     display: flex;
@@ -39,6 +46,8 @@ header {
 
 .menu ul li {
     list-style: none;
+    align-content: center;
+    text-align: center;
 }
 
 .menu ul li a {
@@ -99,8 +108,24 @@ header {
     transform: translateY(0) rotate(45deg);
 }
 
+@media (max-width: 760px) {
+    .nav-menu input:checked ~ .menu {
+        width: 400px;
+    }
+}
+
 @media (max-width: 480px) {
     .menu ul li a {
-        font-size: 3vmin;
+        font-size: 11px;
+    }
+
+    .nav-menu input:checked ~ .menu {
+        width: 275px;
+    }
+
+    .logo {
+        left: 3%;
+        top: 32%;
+        width: 25px;
     }
 }
