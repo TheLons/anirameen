@@ -1,72 +1,43 @@
 .gallery {
-    position: relative;
-    overflow: scroll;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: auto;
 }
 
-.track {
-    position: relative;
-    overflow: scroll;
-    height: 80%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.gallery-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 40px 20px 0 20px;
 }
 
-.image-track {
+.gallery-container .box {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    overflow: scroll;
-    height: 80%;
-    top: 5%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gallery-container .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
 }
 
 .image {
-    height: 70%;
-    object-fit: cover; 
-    transition: 1s;
-    object-position: center;
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
 }
 
-.box {
-    flex: 1;
-    overflow: hidden;
-    transition: 1s;
-    margin: 0 2px;
-    height: 100%;
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@media only screen and (max-width: 769px) {
 
-@media(hover: hover) and (pointer: fine) {
-    .box:hover { flex: 1 1 5%; }
-
-    .box:hover > .image {
-        height: 100%;
-    }
-    
-    .box:not(:hover) > .image {
-        height: 70%;
-    }
-}
-
-@media (max-width: 480px) {
-    .track {
-        height: 100%;
+.gallery-container .box {
+        flex-direction: column;
     }
 
-    .image-track {
-        height: 90%;
-    }
-    
-    .image {
-        height: 75%;
+
+.gallery-container .box .dream {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }

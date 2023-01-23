@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -69,46 +68,13 @@ section {
 }
 
 .footer {
-    height: 0;
+    height: 15px;
+    width: 100%;
 }
 
-/* @media (orientation: landscape) {
-    section {
-        scroll-snap-align: start;
-    }
-
-    .container {
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-    }
-}
-
-@media (min-width: 481px) and (max-width: 850px) {
-    .main {
-        background-image: url('../images/background/box.png');
-        background-size: cover;
-        background-position: center;
-    }
-
-    .social {
-        left: 85%;
-    }
-
-    .social-icon {
-        width: 40%;
-        margin: 20px;
-    }
-} */
-
-@media(hover: hover) and (pointer: fine) {
-    section {
-        scroll-snap-align: start;
-    }
-
-    .container {
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-    }
+.anirameen-design {
+    color: whitesmoke;
+    font-size: 10px;
 }
 
 @media (orientation: portrait) {
