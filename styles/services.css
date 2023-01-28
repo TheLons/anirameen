@@ -29,7 +29,13 @@
     font-family: 'Comfortaa', cursive;
 }
 
+.service hr {
+    margin-bottom: 15px;
+}
+
 .service ul li {
+    padding: 5px;
+    gap: 2px;
     font-family: 'Comfortaa', cursive;
 }
 
