@@ -99,6 +99,29 @@ section {
     font-size: 10px;
 }
 
+.lang {
+    width: 30px;
+    height: 30px;
+    color: whitesmoke;
+    background-color: #121212;
+    border-width: 1px;
+}
+
+.lang:hover {
+    background-color: #2b2828;
+}
+
+#languageSwitcher {
+    width: 30px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 20%;
+    right: 0;
+    background-color: antiquewhite;
+}
+
 @media (orientation: portrait) {
     .brief {
         display:inline-block;
