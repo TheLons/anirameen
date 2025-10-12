@@ -27,15 +27,14 @@ const InfiniteUpDown = () => {
   ) 
 }
 
-const FlipLink = ({ children, href, onClick }) => {
+const FlipLink = ({ children, onClick }) => {
   // Check if device supports hover (not a touch device)
   const isHoverSupported = typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches;
     return (
-      <motion.a
+      <motion.div
         initial="initial"
         whileHover={isHoverSupported ? "hovered" : "initial"}
         transition={{ staggerChildren: 0.15 }}
-        href={href}
         className={styles.headerLink}
         onClick={onClick}
       >
@@ -46,7 +45,7 @@ const FlipLink = ({ children, href, onClick }) => {
             className={styles.headerLinkHovered}
             variants={{ initial: { y: "100%" }, hovered: { y: 0 } }}
           >{children}</motion.div>
-      </motion.a>
+      </motion.div>
     )
 }
 
@@ -66,11 +65,11 @@ const HeroSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}>
-          <p><FlipLink href="#">ANIRAMEEN</FlipLink></p>
+          <p><FlipLink>ANIRAMEEN</FlipLink></p>
         </motion.div>
         <header className={styles.headerMenu}>
           <ul>
-            <li><FlipLink href="/Video">VIDEO_PROJECTS,</FlipLink></li>
+            <li><FlipLink><Link className={styles.headerLink} to="/Video" onClick={()=>setIsMenuOpen(false)}>VIDEOS</Link>,</FlipLink></li>
             {/* <li><FlipLink href="/photo">GALLERY,</FlipLink></li> */}
             {/* <li><FlipLink href="/contact">CONTACTS,</FlipLink></li> */}
           </ul>
