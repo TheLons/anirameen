@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import Lenis from 'lenis'
 
 import styles from './VideoPage.module.css'
@@ -253,6 +254,12 @@ const VideoPage = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const navigate = useNavigate();
+    const handleHomeClick = () => {
+        setIsMenuOpen(false);
+        navigate("/"); // переход после закрытия меню
+      };
+
     return (
         <div className={styles.mainContainer}>
             <div className={styles.header}>
@@ -320,7 +327,9 @@ const VideoPage = () => {
                     <img src={Close} alt="Close menu" />
                 </div>
                 <nav className={styles.overlayLinks}>
-                    <Link to="/" onClick={toggleMenu}>HOME</Link>
+                    <button onClick={handleHomeClick} className={styles.overlayLink}>
+                        HOME
+                    </button>
                     {/* <Link to="/video" onClick={toggleMenu}>VIDEO</Link> */}
                     {/* <Link to="/photo" onClick={toggleMenu}>PHOTO</Link> */}
                     {/* <Link to="/contact" onClick={toggleMenu}>CONTACT</Link> */}
