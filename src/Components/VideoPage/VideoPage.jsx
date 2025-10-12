@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import Lenis from 'lenis'
+// import Lenis from 'lenis'
 
 import styles from './VideoPage.module.css'
 import Burger from '../../assets/icons/burger.png'
@@ -202,7 +202,7 @@ const VideoPage = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [selectedVideo, setSelectedVideo] = useState(null);
     const routePath = useLocation();
-    const lenisRef = useRef(null);
+    // const lenisRef = useRef(null);
 
     // Scroll to top of the page
     useEffect(() => {
@@ -210,31 +210,31 @@ const VideoPage = () => {
     }, [routePath])
 
     // Initialize Lenis smooth scrolling
-    useEffect(() => {
-        lenisRef.current = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-            orientation: 'vertical',
-            gestureOrientation: 'vertical',
-            smoothWheel: true,
-            wheelMultiplier: 1,
-            smoothTouch: false,
-            touchMultiplier: 2,
-            infinite: false,
-        });
+    // useEffect(() => {
+    //     lenisRef.current = new Lenis({
+    //         duration: 1.2,
+    //         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    //         orientation: 'vertical',
+    //         gestureOrientation: 'vertical',
+    //         smoothWheel: true,
+    //         wheelMultiplier: 1,
+    //         smoothTouch: false,
+    //         touchMultiplier: 2,
+    //         infinite: false,
+    //     });
 
-        function raf(time) {
-            lenisRef.current?.raf(time);
-            requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
+    //     function raf(time) {
+    //         lenisRef.current?.raf(time);
+    //         requestAnimationFrame(raf);
+    //     }
+    //     requestAnimationFrame(raf);
 
-        return () => {
-            if (lenisRef.current) {
-                lenisRef.current.destroy();
-            }
-        };
-    }, []);
+    //     return () => {
+    //         if (lenisRef.current) {
+    //             lenisRef.current.destroy();
+    //         }
+    //     };
+    // }, []);
 
     const handleMenuClick = (menu) => {
         setIsActive(menu);
@@ -255,6 +255,7 @@ const VideoPage = () => {
     };
 
     const navigate = useNavigate();
+
     const handleHomeClick = () => {
         setIsMenuOpen(false);
         navigate("/"); // переход после закрытия меню
