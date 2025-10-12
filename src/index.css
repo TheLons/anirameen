@@ -1,0 +1,63 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 16px;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --main-color: #6ED5E5;
+  --main-gradient: linear-gradient(to right top, #6ED5E5, #266A75);
+  --second-text-color: #B3B3B3;
+  --background-color: #111111;
+  --width-max: 1260px;
+}
+
+html,
+body {
+   margin: 0;
+   padding: 0;
+}
+
+/* Disable hover effects on touch devices to prevent accidental triggering */
+@media (hover: none) and (pointer: coarse) {
+  *:hover {
+    /* Disable all hover effects on touch devices */
+    transform: none !important;
+    opacity: 1 !important;
+    background-color: initial !important;
+    border-color: initial !important;
+    color: initial !important;
+    box-shadow: initial !important;
+  }
+  
+  /* Re-enable hover effects only on click/touch for interactive elements */
+  .clickable:active,
+  .card:active,
+  .video:active,
+  .reelCard:active,
+  .award:active,
+  .contentCard:active,
+  .submitBtn:active,
+  .closeButton:active,
+  .burger:active,
+  .tabButton:active {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(110, 213, 229, 0.2) !important;
+  }
+  
+  .video:active .playOverlay,
+  .reelCard:active .playOverlay {
+    opacity: 1 !important;
+  }
+  
+  .video:active .videoContent,
+  .reelCard:active .reelContent {
+    opacity: 0.8 !important;
+  }
+}

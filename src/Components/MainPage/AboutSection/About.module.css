@@ -1,0 +1,144 @@
+.aboutSection {
+    width: 100%;
+    height: 100vh;
+
+    padding: 0;
+    margin: 0;
+    background-color: #111111;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.descContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+    width: 80vw;
+    max-width: var(--width-max);
+    height: 50vh;
+    max-height: 400px;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    opacity: 0;
+}
+
+.title h2 {
+    font-weight: 900;
+    font-size: clamp(28px, 6vw, 40px);
+    background-image: var(--main-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback */
+}
+
+.descContainer h2, .descContainer p {
+    padding: 0;
+    margin: 0;
+}
+
+.descContainer p {
+    margin: 0;
+    padding: 0;
+}
+
+.description {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: var(--second-text-color);
+    font-size: clamp(18px, 4vw, 32px);
+    font-weight: 400;
+    opacity: 0;
+}
+
+@media (max-width: 900px) {
+    .title h2 {
+        font-size: clamp(22px, 7vw, 32px);
+    }
+    .description {
+        font-size: clamp(16px, 5vw, 28px);
+    }
+}
+
+@media (max-width: 600px) {
+    .descContainer {
+        gap: 24px;
+        max-height: none;
+        min-height: 50vh;
+    }
+    .title h2 {
+        font-size: clamp(18px, 9vw, 24px);
+    }
+    .description {
+        font-size: clamp(13px, 5vw, 19px);
+    }
+}
+
+#topRight, #topLeft, #bottomRight, #bottomLeft {
+    position: absolute;
+}
+
+#topRight {
+    top: 5px;
+    right: 5px;
+    transform: scaleX(-1);
+}
+
+#topLeft {
+    top: 5px;
+    left: 5px;
+}
+
+#bottomRight {
+    bottom: 5px;
+    right: 5px;
+    transform: scaleX(-1) scaleY(-1);
+}
+
+#bottomLeft {
+    bottom: 5px;
+    left: 5px;
+    transform: scaleY(-1);
+}
+
+.experience {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+
+    opacity: 0;
+}
+
+.experience_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: auto;
+    align-items: center;
+    color: var(--second-text-color);
+    font-size: clamp(14px, 3vw, 20px);
+    width: 207px;
+    text-align: center;
+}
+
+.years {
+    background-image: var(--main-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; /* Fallback */
+    font-size: clamp(22px, 6vw, 40px);
+    font-weight: 900;
+}

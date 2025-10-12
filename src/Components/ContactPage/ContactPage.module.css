@@ -1,0 +1,145 @@
+.mainContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.header {
+    height: 300px;
+    width: 100%;
+    background-image: url(../../assets/backgrounds/camera.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.shadowBox {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0;
+    margin-top: 32px;
+    margin-left: 32px;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.burger {
+    height: fit-content;
+    margin-top: 36px;
+    margin-right: 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1000;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.burger:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mainContent {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px 20px;
+}
+
+/* Overlay Menu Styles */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.closeButton {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.overlayLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.overlayLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+.overlayLinks a:hover {
+    color: var(--main-gradient);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        height: 200px;
+    }
+    
+    .header h1 {
+        font-size: clamp(24px, 6vw, 32px);
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
+    .burger {
+        margin-top: 24px;
+        margin-right: 20px;
+    }
+    
+    .mainContent {
+        padding: 20px 15px;
+    }
+    
+    .overlayLinks a {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,223 @@
+.heroSection {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../../assets/backgrounds/mainBackground.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    z-index: 0;
+
+    overflow: hidden;
+}
+
+.shadowBox {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.25);
+    box-sizing: border-box;
+}
+
+.header {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+
+    padding: 0px 19px;
+    font-size: 40px;
+    font-weight: 800;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.headerMenu {
+    position: absolute;
+    top: 112px;
+    left: 28px;
+
+    padding: 23px 19px;
+
+    font-size: 40px;
+    font-weight: 800;
+    z-index: 6;
+}
+
+.tagsContainer {
+    position: absolute;
+    bottom: 36px;
+    left: 36px;
+    display: flex;
+    z-index: 6;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 314px;
+    height: 121px;
+}
+
+.tags p {
+    border: 1px solid white;
+    padding: 4px 12px;
+    font-weight: 800;
+    transition: all ease .15s;
+}
+
+.tags p:hover {
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: black;
+}
+
+.qrCode {
+    position: absolute;
+    bottom: 36px;
+    right: 36px;
+    height: 121px;
+}
+
+.qrCode img {
+    height: 100%;
+}
+
+.arrowMore {
+    position: absolute;
+    bottom: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.arrowMore img {
+    height: 30px;
+}
+
+.headerLink {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    white-space: preserve nowrap;
+    text-decoration: none;
+    color: white;
+    transition: all ease 0.15s;
+}
+
+.headerLink:hover {
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.headerLinkHovered {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.linkWrapper {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 36px;
+    right: 36px;
+    z-index: 20;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.burger img {
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+}
+.burger:active, .burger:focus { outline: 2px solid #6ED5E5; }
+/* Overlay styles for menu */
+.overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.95);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; visibility: hidden;
+    transition: all 0.3s;
+}
+.overlay.active {
+    opacity: 1; visibility: visible;
+}
+.overlayLinks {
+    display: flex; flex-direction: column; align-items: center; gap: 32px;
+}
+.overlayLinks a, .overlayLinks .headerLink {
+    color: #fff;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 600;
+    padding: 16px 24px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+}
+.overlayLinks a::after, .overlayLinks .headerLink::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6ED5E5;
+    transition: width 0.3s ease;
+}
+.overlayLinks a:hover, .overlayLinks .headerLink:hover {
+    color: #6ED5E5;
+    background: none;
+}
+.overlayLinks a:hover::after, .overlayLinks .headerLink:hover::after {
+    width: 100%;
+}
+.closeButton {
+    position: absolute; top: 15px; right: 28px;
+    background: none; border: none; color: #fff; font-size: 32px;
+    padding: 10px; border-radius: 8px; cursor: pointer; z-index: 20000;
+}
+@media (max-width: 900px) {
+    .headerMenu { display: none; }
+    .tagsContainer { display: none; }
+    .burger { display: block; }
+    .heroSection { background-position: 75% 25%; }
+}
+@media (max-width: 600px) {
+    .burger { top: 18px; right: 18px; }
+    .qrCode { bottom: 12px; right: 12px; }
+    .tagsContainer { left: 12px; bottom: 12px; }
+    .arrowMore { bottom: 14px; }
+    .header { top: 16px; left: 16px; }
+    .heroSection { background-position: 75% 25%; }
+}

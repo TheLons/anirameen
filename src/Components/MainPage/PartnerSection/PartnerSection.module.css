@@ -1,0 +1,145 @@
+.partnerContainer {
+    height: auto;
+    position: relative;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    
+    background-color: var(--background-color);
+}
+
+.partnerContent {
+    width: 80vw;
+    max-width: var(--width-max);
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+
+.title h2 {
+    font-weight: 900;
+    font-size: 40px;
+    background-image: var(--main-gradient);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.partners {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 40px;
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+    padding: 60px 20px;
+}
+
+.partnersInside {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 180px;
+    height: 90px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(110, 213, 229, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(110, 213, 229, 0.2);
+}
+
+.card img {
+    max-width: 80%;
+    max-height: 70%;
+    object-fit: contain;
+    filter: brightness(0.9) contrast(1.1);
+    transition: all ease 0.3s;
+}
+
+.card:hover img {
+    filter: brightness(1) contrast(1.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .partners {
+        padding: 40px 20px;
+        gap: 30px;
+    }
+    
+    .partnersInside {
+        gap: 20px;
+    }
+    
+    .card {
+        width: 140px;
+        height: 70px;
+    }
+    
+    .title h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+    
+    .partnersInside {
+        gap: 15px;
+    }
+    
+    .card {
+        width: 120px;
+        height: 60px;
+    }
+    
+    .title h2 {
+        font-size: 28px;
+    }
+}
