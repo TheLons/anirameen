@@ -1,23 +1,24 @@
-import { HashRouter as Router, Route, Routes } from "react-router-dom" 
+import { useState } from 'react'
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom" 
 import './App.css'
 
 import MainPage from './Components/MainPage/MainPage'
 import VideoPage from './Components/VideoPage/VideoPage'
-import ContactPage from './Components/ContactPage/ContactPage'
+// import ContactPage from './Components/ContactPage/ContactPage'
 // import PhotoPage from './Components/PhotoPage/PhotoPage'
 
 function App() {
 
   return (
-    <Router>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/Home" element={<MainPage />} />
-        <Route path="/Video" element={<VideoPage />}/>
+        <Route path="/home" element={<MainPage />} />
+        <Route path="/video" element={<VideoPage />}/>
         {/* <Route path="/contact" element={<ContactPage />}/> */}
         {/* <Route path="/photo" element={<PhotoPage />}/> */}
       </Routes>
-    </Router>
+    </HashRouter>
   )
 }
 

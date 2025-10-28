@@ -1,40 +1,42 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, useAnimation, useTransform, useScroll } from 'framer-motion'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from './HeroSection.module.css'
 import qrCode from '../../../assets/icons/qrcode.svg'
 import arrow from '../../../assets/icons/arrow.png'
 import Burger from '../../../assets/icons/burger.png'
 import Close from '../../../assets/icons/close.png'
 
-const InfiniteUpDown = () => {
-  const controls = useAnimation()
-  useEffect(() => {
-    const sequence = async () => {
-      await controls.start({ y: 10, transition: {
-        duration: 2, ease: "easeInOut" }})
-      await controls.start({ y: -10, transition: {
-        duration: 2, ease: "easeInOut" }})
-      sequence()
-    }
-    sequence()
-  }, [controls])
-  return (
-    <motion.div className={styles.arrowMore} animate={controls}>
-      <p>Scroll down</p>
-      <img src={arrow} alt="Arrow down" />
-    </motion.div>
-  ) 
-}
+// const InfiniteUpDown = () => {
+//   const controls = useAnimation()
+//   useEffect(() => {
+//     const sequence = async () => {
+//       await controls.start({ y: 10, transition: {
+//         duration: 2, ease: "easeInOut" }})
+//       await controls.start({ y: -10, transition: {
+//         duration: 2, ease: "easeInOut" }})
+//       sequence()
+//     }
+//     sequence()
+//   }, [controls])
+//   return (
+//     <motion.div className={styles.arrowMore} animate={controls}>
+//       <p>Scroll down</p>
+//       <img src={arrow} alt="Arrow down" />
+//     </motion.div>
+//   ) 
+// }
 
-const FlipLink = ({ children, onClick }) => {
+const FlipLink = ({ children, href, onClick }) => {
+  const MotionLink = motion(Link);
   // Check if device supports hover (not a touch device)
   const isHoverSupported = typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches;
     return (
-      <motion.div
+      <MotionLink
         initial="initial"
         whileHover={isHoverSupported ? "hovered" : "initial"}
         transition={{ staggerChildren: 0.15 }}
+        to={href}
         className={styles.headerLink}
         onClick={onClick}
       >
@@ -45,7 +47,7 @@ const FlipLink = ({ children, onClick }) => {
             className={styles.headerLinkHovered}
             variants={{ initial: { y: "100%" }, hovered: { y: 0 } }}
           >{children}</motion.div>
-      </motion.div>
+      </MotionLink>
     )
 }
 
@@ -65,11 +67,11 @@ const HeroSection = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}>
-          <p><FlipLink>ANIRAMEEN</FlipLink></p>
+          <p><FlipLink href="#">ANIRAMEEN</FlipLink></p>
         </motion.div>
         <header className={styles.headerMenu}>
           <ul>
-            <li><FlipLink><Link className={styles.headerLink} to="/Video" onClick={()=>setIsMenuOpen(false)}>VIDEOS</Link>,</FlipLink></li>
+            <li><FlipLink href="/video">VIDEO_PROJECTS,</FlipLink></li>
             {/* <li><FlipLink href="/photo">GALLERY,</FlipLink></li> */}
             {/* <li><FlipLink href="/contact">CONTACTS,</FlipLink></li> */}
           </ul>
@@ -90,24 +92,24 @@ const HeroSection = () => {
           </button>
           <nav className={styles.overlayLinks}>
             {/* <Link className={styles.headerLink} to="/" onClick={()=>setIsMenuOpen(false)}>HOME</Link> */}
-            <Link className={styles.headerLink} to="/Video" onClick={()=>setIsMenuOpen(false)}>VIDEOS</Link>
+            <Link className={styles.headerLink} to="/video" onClick={()=>setIsMenuOpen(false)}>VIDEOS</Link>
             {/* <Link className={styles.headerLink} to="/contact" onClick={()=>setIsMenuOpen(false)}>CONTACT</Link> */}
           </nav>
         </div>
         <div className={styles.tagsContainer}>
           <div className={styles.tags}>
             <p>Adobe Premiere Pro</p>
-            <p>Lumix GH5</p>
+            <p>Adobe After Effects</p>
             <p>Adobe Photoshop</p>
             <p>Photo</p>
             <p>Video</p>
-            <p>Cinema</p>
+            <p>Motion Design</p>
           </div>
         </div>
         <div className={styles.qrCode}>
           <img src={qrCode} alt="QR code" />
         </div>
-        <InfiniteUpDown />
+        {/* <InfiniteUpDown /> */}
       </motion.div>
     </>
   )

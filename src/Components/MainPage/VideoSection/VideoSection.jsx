@@ -4,6 +4,10 @@ import styles from './VideoSection.module.css'
 import playLogo from '../../../assets/icons/playLogo.svg'
 import { motion, useInView } from 'framer-motion'
 
+import showreel from '../../../assets/videoPreview/showreel.jpg'
+import riot from '../../../assets/videoPreview/riot.jpg'
+import koruPharma from '../../../assets/videoPreview/koru-pharma.jpg'
+
 import ArrowRight from '../../../assets/icons/arrowRight.png'
 
 const VideoSection = () => {
@@ -42,7 +46,7 @@ const VideoSection = () => {
     const video_preview_urls = [
         {
             id: 'showreel',
-            video_prev : "src/assets/videoPreview/showreel.jpg",
+            video_prev : showreel,
             video_url: "https://player.vimeo.com/video/1108432715?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
             video_heading: "Showreel 2025",
             video_text: "Director / Video Editor / Videographer",
@@ -50,7 +54,7 @@ const VideoSection = () => {
         },
         {
             id: 'riot',
-            video_prev: "src/assets/videoPreview/riot.jpg",
+            video_prev: riot,
             video_url: "https://www.youtube.com/embed/gp0TV-b1XaM?si=GT0yKfr2Xa8H8OK_",
             video_heading: "The making of VCT Pacific Trophy",
             video_text: "Video Editor",
@@ -58,7 +62,7 @@ const VideoSection = () => {
         },
         {
             id: 'koru-pharma',
-            video_prev: "src/assets/videoPreview/koru-pharma.jpg",
+            video_prev: koruPharma,
             video_url: "https://www.youtube.com/embed/GTUBLc3nyyc?si=-YyuALxNJ37CoQDR",
             video_heading: "Koru Pharma",
             video_text: "Video Director / Video Editor / Videographer",
@@ -146,9 +150,8 @@ const VideoCard = ({ video_prev, video_heading, video_text, hasVideo, onClick })
             className={`${styles.video} ${hasVideo ? styles.clickable : ''}`}
             onClick={onClick}
         >
-            <div className={styles.videoContent} style={{
-                backgroundImage: `url(${video_prev})`,
-            }}>
+            <div className={styles.videoContent}>
+                <img src={video_prev} alt={video_heading} className={styles.videoPreview} />
                 {hasVideo && (
                     <div className={styles.playOverlay}>
                         <img src={playLogo} alt="Play" />
