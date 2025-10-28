@@ -6,10 +6,24 @@ import Burger from '../../assets/icons/burger.png'
 import Close from '../../assets/icons/close.png'
 import playLogo from '../../assets/icons/playLogo.svg'
 
+import vct_pacific from '/src/assets/videoPreview/riot.jpg'
+import koru_pharma from '/src/assets/videoPreview/koru-pharma.jpg'
+import vbi from '/src/assets/videoPreview/vbi.jpg'
+import jhope from '/src/assets/videoPreview/jhope.jpg'
+import suidae from '/src/assets/videoPreview/suidae.jpg'
+import techlado from '/src/assets/videoPreview/techlado.jpg'
+
+import tatoo from '/src/assets/videoPreview/tattoo.jpg'
+import foundation from '/src/assets/videoPreview/foundation.jpg'
+import lounge from '/src/assets/videoPreview/lounge.jpg'
+import painter from '/src/assets/videoPreview/painter.jpg'
+import wonhwa1 from '/src/assets/videoPreview/wonhwa1.jpg'
+import wonhwa2 from '/src/assets/videoPreview/wonhwa2.jpg'
+
 const videos_list = [
     {
         id: 'vct-pacific',
-        video_prev : "src/assets/videoPreview/riot.jpg",
+        video_prev : vct_pacific,
         video_url: "https://www.youtube.com/embed/gp0TV-b1XaM?si=AvHn1fiqvy9ziTb_",
         video_heading: "VCT Pacific Trophy",
         video_text: "Video Editor",
@@ -17,7 +31,7 @@ const videos_list = [
     },
     {
         id: 'koru-pharma',
-        video_prev: "src/assets/videoPreview/koru-pharma.jpg",
+        video_prev: koru_pharma,
         video_url: "https://www.youtube.com/embed/GTUBLc3nyyc?si=dqQRWuWOrSkn4WB7",
         video_heading: "Koru Pharma",
         video_text: "Video Director / Video Editor",
@@ -25,7 +39,7 @@ const videos_list = [
     },
     {
         id: 'vbi',
-        video_prev: "src/assets/videoPreview/vbi.jpg",
+        video_prev: vbi,
         video_url: "https://player.vimeo.com/video/1019736661?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
         video_heading: "VBI Promotional Video",
         video_text: "Video Editor",
@@ -33,7 +47,7 @@ const videos_list = [
     },
     {
         id: 'jhope',
-        video_prev: "src/assets/videoPreview/jhope.jpg",
+        video_prev: jhope,
         video_url: "https://www.youtube.com/embed/JDaGyzKCfYg?si=sUvwiQpPZ6o4Gd5B",
         video_heading: "j-hope (제이홉) 'MONA LISA' ",
         video_text: "Video Director / Videographer / Video Editor",
@@ -41,7 +55,7 @@ const videos_list = [
     },
     {
         id: 'suidae',
-        video_prev: "src/assets/videoPreview/suidae.jpg",
+        video_prev: suidae,
         video_url: "https://player.vimeo.com/video/915087036?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
         video_heading: "Suidae Short Film",
         video_text: "Video Director / Video Editor",
@@ -49,7 +63,7 @@ const videos_list = [
     },
     {
         id: 'techlado',
-        video_prev: "src/assets/videoPreview/techlado.jpg",
+        video_prev: techlado,
         video_url: "https://player.vimeo.com/video/800079014?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
         video_heading: "TechLado Project Example",
         video_text: "Video Editor",
@@ -61,7 +75,7 @@ const videos_list = [
 const reels_list = [
     {
         id: 'tattoo',
-        video_prev: 'src/assets/videoPreview/tattoo.jpg',
+        video_prev: tatoo,
         video_url: 'https://player.vimeo.com/video/913238608?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
         video_heading: 'Tattoo Studio Promo',
         video_text: 'Video Director / Videographer / Video Editor',
@@ -69,7 +83,7 @@ const reels_list = [
     },
     {
         id: 'foundation',
-        video_prev: 'src/assets/videoPreview/foundation.jpg',
+        video_prev: foundation,
         video_url: 'https://player.vimeo.com/video/1108342002?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
         video_heading: 'Promo Foundation',
         video_text: 'Video Director / Videographer / Video Editor',
@@ -77,7 +91,7 @@ const reels_list = [
     },
     {
         id: 'lounge',
-        video_prev: 'src/assets/videoPreview/lounge.jpg',
+        video_prev: lounge,
         video_url: 'https://player.vimeo.com/video/929306447?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
         video_heading: 'Lounge Bar Promo',
         video_text: 'Video Director / Videographer / Video Editor',
@@ -85,7 +99,7 @@ const reels_list = [
     },
     {
         id: 'painter',
-        video_prev: 'src/assets/videoPreview/painter.jpg',
+        video_prev: painter,
         video_url: 'https://player.vimeo.com/video/848638896?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
         video_heading: 'Painter Social Promo',
         video_text: 'Video Director / Videographer / Video Editor',
@@ -93,7 +107,7 @@ const reels_list = [
     },
     {
         id: 'wonhwa1',
-        video_prev: 'src/assets/videoPreview/wonhwa1.jpg',
+        video_prev: wonhwa1,
         video_url: 'https://player.vimeo.com/video/1122561736?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
         video_heading: 'Beauty box promotion at London Hallyu Festival',
         video_text: 'Video Director / Video Editor',
@@ -101,7 +115,7 @@ const reels_list = [
     },
     {
         id: 'wonhwa2',
-        video_prev: 'src/assets/videoPreview/wonhwa2.jpg',
+        video_prev: wonhwa2,
         video_url: 'https://player.vimeo.com/video/1122573461?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
         video_heading: 'Beauty box promotion at London Hallyu Festival',
         video_text: 'Video Director / Videographer / Video Editor',
