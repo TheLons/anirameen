@@ -4,28 +4,9 @@ import styles from './AwardsSection.module.css'
 const AwardItem = ({ award, isActive, onActivate }) => {
   const { id, logo, name, information, description } = award
 
-  const handleToggle = () => {
-    onActivate(isActive ? '' : id)
-  }
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault()
-      handleToggle()
-    }
-  }
-
   return (
     <div
-      className={`${styles.award} ${isActive ? styles.active : ''}`}
-      onMouseEnter={() => onActivate(id)}
-      onFocus={() => onActivate(id)}
-      onClick={handleToggle}
-      role="button"
-      tabIndex={0}
-      aria-expanded={isActive}
-      aria-controls={`award-desc-${id}`}
-      onKeyDown={handleKeyDown}
+      className={`${styles.award}`}
     >
       <div className={styles.preview}>
         <div className={styles.previewMain}>

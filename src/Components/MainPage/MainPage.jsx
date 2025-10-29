@@ -11,45 +11,45 @@ import ContactSection from './ContactSection/ContactSection';
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useEffect, useRef } from 'react';
-import Lenis from 'lenis'
+// import Lenis from 'lenis'
 
 const SECTION_HEIGHT = 1500;
 
 const MainPage = () => {
-    const lenisRef = useRef(null);
+    // const lenisRef = useRef(null);
     const { scrollY } = useScroll();
 
     const opacity = useTransform(scrollY, [0, SECTION_HEIGHT], [1, 0]);
     const backgroundSize = useTransform(scrollY, [0, SECTION_HEIGHT], ["100%", "60%"]);
 
-    useEffect(() => {
-        // Initialize Lenis smooth scrolling
-        lenisRef.current = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing
-            orientation: 'vertical',
-            gestureOrientation: 'vertical',
-            smoothWheel: true,
-            wheelMultiplier: 1,
-            smoothTouch: false,
-            touchMultiplier: 2,
-            infinite: false,
-        });
+    // useEffect(() => {
+    //     // Initialize Lenis smooth scrolling
+    //     lenisRef.current = new Lenis({
+    //         duration: 1.2,
+    //         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Custom easing
+    //         orientation: 'vertical',
+    //         gestureOrientation: 'vertical',
+    //         smoothWheel: true,
+    //         wheelMultiplier: 1,
+    //         smoothTouch: false,
+    //         touchMultiplier: 2,
+    //         infinite: false,
+    //     });
 
-        // RAF loop for Lenis
-        function raf(time) {
-            lenisRef.current?.raf(time);
-            requestAnimationFrame(raf);
-        }
-        requestAnimationFrame(raf);
+    //     // RAF loop for Lenis
+    //     function raf(time) {
+    //         lenisRef.current?.raf(time);
+    //         requestAnimationFrame(raf);
+    //     }
+    //     requestAnimationFrame(raf);
 
-        // Cleanup
-        return () => {
-            if (lenisRef.current) {
-                lenisRef.current.destroy();
-            }
-        };
-    }, []);
+    //     // Cleanup
+    //     return () => {
+    //         if (lenisRef.current) {
+    //             lenisRef.current.destroy();
+    //         }
+    //     };
+    // }, []);
 
     return (
         <div className={styles.global}>

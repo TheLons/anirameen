@@ -144,11 +144,11 @@
     overflow: hidden;
 }
 
-.award.active .description p {
+/* .award.active .description p {
     -webkit-line-clamp: unset;
     line-clamp: unset;
     overflow: visible;
-}
+} */
 
 .award:focus-visible {
     outline: 2px solid rgba(110,213,229,0.5);
