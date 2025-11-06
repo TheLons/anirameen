@@ -29,12 +29,12 @@
 .title {
     display: flex;
     width: 100%;
-    justify-content: end;
+    justify-content: start;
 }
 
 .title h2 {
     font-weight: 900;
-    font-size: 40px;
+    font-size: var(--header-font-size);
     background-image: var(--main-gradient);
     background-clip: text;
     -webkit-text-fill-color: transparent;

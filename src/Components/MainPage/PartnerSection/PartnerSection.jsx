@@ -88,7 +88,7 @@ const PartnerSection = () => {
           className={styles.title} 
           variants={itemVariants}
         >
-          <h2>partners.</h2>
+          <h2>clients.</h2>
         </motion.div>
         <motion.div 
           className={styles.partners}

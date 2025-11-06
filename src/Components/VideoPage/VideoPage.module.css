@@ -205,6 +205,7 @@
     position: absolute;
     bottom: 20px;
     left: 20px;
+    right: 20px;
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.8);
@@ -267,6 +268,7 @@
     background-position: center;
     position: relative;
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 .reelCard.clickable .reelContent:hover {
     opacity: 0.8;

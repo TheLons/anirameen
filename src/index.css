@@ -16,6 +16,7 @@
   --second-text-color: #B3B3B3;
   --background-color: #111111;
   --width-max: 1260px;
+  --header-font-size: clamp(20px, 4vw, 40px);
 }
 
 html,

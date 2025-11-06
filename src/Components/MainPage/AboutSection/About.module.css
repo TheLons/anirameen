@@ -32,11 +32,12 @@
     display: flex;
     width: 100%;
     opacity: 0;
+    justify-content: start;
 }
 
 .title h2 {
     font-weight: 900;
-    font-size: clamp(28px, 6vw, 40px);
+    font-size: var(--header-font-size);
     background-image: var(--main-gradient);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -58,7 +59,7 @@
     width: 100%;
     flex-direction: column;
     color: var(--second-text-color);
-    font-size: clamp(18px, 4vw, 32px);
+    font-size: clamp(18px, 4vw, 26px);
     font-weight: 400;
     opacity: 0;
 }
