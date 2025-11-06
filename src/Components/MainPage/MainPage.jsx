@@ -17,10 +17,10 @@ const SECTION_HEIGHT = 1500;
 
 const MainPage = () => {
     // const lenisRef = useRef(null);
-    const { scrollY } = useScroll();
+    // const { scrollY } = useScroll();
 
-    const opacity = useTransform(scrollY, [0, SECTION_HEIGHT], [1, 0]);
-    const backgroundSize = useTransform(scrollY, [0, SECTION_HEIGHT], ["100%", "60%"]);
+    // const opacity = useTransform(scrollY, [0, SECTION_HEIGHT], [1, 0]);
+    // const backgroundSize = useTransform(scrollY, [0, SECTION_HEIGHT], ["100%", "60%"]);
 
     // useEffect(() => {
     //     // Initialize Lenis smooth scrolling
@@ -53,14 +53,14 @@ const MainPage = () => {
 
     return (
         <div className={styles.global}>
-            <motion.div
+            {/* <motion.div
                 style={{
                     opacity,
                     backgroundSize,
                 }}
-            >
+            > */}
                 <HeroSection />
-            </motion.div>
+            {/* </motion.div> */}
             <About />
             <VideoSection />
             {/* <PhotoSection /> */}
