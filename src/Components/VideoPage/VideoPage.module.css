@@ -1,21 +1,27 @@
 .mainContainer {
     width: 100%;
+    max-width: 100vw;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--background-color);
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .header {
     height: 300px;
     width: 100%;
+    max-width: 100vw;
     background-image: url(../../assets/backgrounds/camera.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: space-between;
     position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .shadowBox {
@@ -60,7 +66,8 @@
 }
 
 .subMenu {
-    width: var(--width-max);
+    width: 100%;
+    max-width: var(--width-max);
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -71,6 +78,7 @@
     list-style: none;
     padding: 0;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .tabButton {
@@ -120,10 +128,13 @@
 
 .mainContent {
     width: 100%;
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .videoComponent {
@@ -136,6 +147,7 @@
     gap: 28px;
     margin-top: 32px;
     margin-bottom: 32px;
+    box-sizing: border-box;
 }
 .video {
     width: calc(50% - 14px);
@@ -222,6 +234,7 @@
     gap: 28px;
     margin-top: 32px;
     margin-bottom: 32px;
+    box-sizing: border-box;
 }
 .reelCard {
     width: calc(33.33% - 19px);
@@ -419,6 +432,7 @@
     .subMenu {
         gap: 40px;
         margin-top: 40px;
+        padding: 0 20px;
     }
     .tabButton {
         font-size: 20px;
@@ -426,14 +440,19 @@
     }
     .videoComponent, .reelsComponent {
         gap: 20px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
     }
     .video {
         width: 100%;
         max-width: 500px;
+        min-width: unset;
     }
     .reelCard {
         width: 100%;
         max-width: 350px;
+        min-width: unset;
     }
     .videoModalContent {
         padding: 15px;
@@ -454,6 +473,7 @@
         gap: 20px;
         margin-top: 20px;
         font-size: 20px;
+        padding: 0 16px;
     }
     .tabButton {
         font-size: 20px;
@@ -475,10 +495,14 @@
     .subMenu {
         gap: 20px;
         margin-top: 30px;
+        padding: 0 16px;
     }
     .tabButton {
         font-size: 20px;
         padding: 8px 10px;
+    }
+    .videoComponent, .reelsComponent {
+        padding: 0 16px;
     }
     .videoModalContent {
         padding: 10px;
@@ -500,11 +524,16 @@
         align-items: center;
         gap: 10px;
         font-size: 20px;
+        padding: 0 16px;
     }
     .tabButton {
         font-size: 20px;
         padding: 7px 10px;
         width: 80vw;
+        max-width: 300px;
+    }
+    .videoComponent, .reelsComponent {
+        padding: 0 12px;
     }
 }
 

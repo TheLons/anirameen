@@ -7,26 +7,6 @@ import arrow from '../../../assets/icons/arrow.png'
 import Burger from '../../../assets/icons/burger.png'
 import Close from '../../../assets/icons/close.png'
 
-// const InfiniteUpDown = () => {
-//   const controls = useAnimation()
-//   useEffect(() => {
-//     const sequence = async () => {
-//       await controls.start({ y: 10, transition: {
-//         duration: 2, ease: "easeInOut" }})
-//       await controls.start({ y: -10, transition: {
-//         duration: 2, ease: "easeInOut" }})
-//       sequence()
-//     }
-//     sequence()
-//   }, [controls])
-//   return (
-//     <motion.div className={styles.arrowMore} animate={controls}>
-//       <p>Scroll down</p>
-//       <img src={arrow} alt="Arrow down" />
-//     </motion.div>
-//   ) 
-// }
-
 const FlipLink = ({ children, href, onClick }) => {
   const MotionLink = motion(Link);
   // Check if device supports hover (not a touch device)
