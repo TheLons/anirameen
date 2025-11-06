@@ -306,9 +306,6 @@ const VideoPage = () => {
                 </div>
                 <nav className={styles.overlayLinks}>
                     <Link to="/" onClick={toggleMenu}>HOME</Link>
-                    {/* <Link to="/video" onClick={toggleMenu}>VIDEO</Link> */}
-                    {/* <Link to="/photo" onClick={toggleMenu}>PHOTO</Link> */}
-                    {/* <Link to="/contact" onClick={toggleMenu}>CONTACT</Link> */}
                 </nav>
             </div>
         </div>
