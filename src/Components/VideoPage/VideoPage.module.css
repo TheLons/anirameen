@@ -39,7 +39,7 @@
     padding: 0;
     margin-top: 32px;
     margin-left: 32px;
-    font-size: clamp(32px, 4vw, 48px);
+    font-size: clamp(20px, 4vw, 40px);
     font-weight: 900;
     color: #ffffff;
 }

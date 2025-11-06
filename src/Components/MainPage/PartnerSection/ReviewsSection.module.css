@@ -225,9 +225,9 @@
 }
 
 @media (max-width: 768px) {
-    .reviewContainer {
+    /* .reviewContainer {
         padding: 40px 15px;
-    }
+    } */
     
     .title {
         margin-bottom: 40px;
@@ -253,9 +253,9 @@
 }
 
 @media (max-width: 480px) {
-    .reviewContainer {
+    /* .reviewContainer {
         padding: 30px 10px;
-    }
+    } */
     
     .title {
         margin-bottom: 30px;

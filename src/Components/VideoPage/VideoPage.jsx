@@ -242,7 +242,7 @@ const VideoPage = () => {
         <div className={styles.mainContainer}>
             <div className={styles.header}>
                 <div className={styles.shadowBox}></div>
-                <h1>VIDEO PROJECTS</h1>
+                <h1 className={styles.headerTitle}>VIDEO PROJECTS</h1>
                 <div 
                     className={styles.burger} 
                     onClick={toggleMenu}
