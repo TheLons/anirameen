@@ -8,15 +8,13 @@ import showreel from '../../../assets/videoPreview/showreel.jpg'
 import riot from '../../../assets/videoPreview/riot.jpg'
 import koruPharma from '../../../assets/videoPreview/koru-pharma.jpg'
 
-import ArrowRight from '../../../assets/icons/arrowRight.png'
-
 const VideoSection = () => {
     const ref = useRef(null)
     const inView = useInView(ref, { once: true, amount: 0.4 });
     const [selectedVideo, setSelectedVideo] = useState(null);
 
     const containerVariants = {
-        hidden: { 
+        hidden: {
             opacity: 0,
         },
         visible: {
@@ -29,14 +27,14 @@ const VideoSection = () => {
     }
 
     const itemVariants = {
-        hidden: { 
+        hidden: {
             opacity: 0,
             y: 30,
         },
         visible: {
             opacity: 1,
             y: 0,
-            transition: { 
+            transition: {
                 duration: 0.8,
                 ease: "easeOut",
             },
@@ -46,7 +44,7 @@ const VideoSection = () => {
     const video_preview_urls = [
         {
             id: 'showreel',
-            video_prev : showreel,
+            video_prev: showreel,
             video_url: "https://player.vimeo.com/video/1108432715?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
             video_heading: "Showreel 2025",
             video_text: "Director / Video Editor / Videographer",
@@ -82,11 +80,11 @@ const VideoSection = () => {
 
     return (
         <div className={styles.videoSection}>
-            <motion.div 
-                className={styles.container} 
-                ref={ref} 
-                initial="hidden" 
-                animate={inView ? 'visible' : 'hidden'} 
+            <motion.div
+                className={styles.container}
+                ref={ref}
+                initial="hidden"
+                animate={inView ? 'visible' : 'hidden'}
                 variants={containerVariants}
             >
                 <motion.div className={styles.title} variants={itemVariants}>
@@ -99,26 +97,26 @@ const VideoSection = () => {
                             variants={itemVariants}
                             style={{ display: 'inline-block' }}
                         >
-                            <VideoCard 
-                                {...video} 
+                            <VideoCard
+                                {...video}
                                 onClick={() => handleVideoClick(video)}
                             />
                         </motion.div>
                     ))}
                 </div>
             </motion.div>
-            <motion.div 
+            <motion.div
                 className={styles.showMore}
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ 
+                transition={{
                     duration: 0.8,
                     ease: "easeOut",
                     delay: 1.2, // Appears after all videos
                 }}
             >
-                <Link 
-                    to="/Video" 
+                <Link
+                    to="/Video"
                     className={styles.link}
                 >
                     <p>Show more</p>
@@ -146,7 +144,7 @@ const VideoCard = ({ video_prev, video_heading, video_text, hasVideo, onClick })
     })
 
     return (
-        <div 
+        <div
             className={`${styles.video} ${hasVideo ? styles.clickable : ''}`}
             onClick={onClick}
         >
@@ -180,7 +178,7 @@ const VideoModal = ({ video, onClose }) => {
     };
 
     return (
-        <div 
+        <div
             className={styles.videoModalOverlay}
             onClick={handleBackdropClick}
             onKeyDown={handleKeyDown}
@@ -189,7 +187,7 @@ const VideoModal = ({ video, onClose }) => {
             aria-labelledby="video-modal-title"
         >
             <div className={styles.videoModalContent}>
-                <button 
+                <button
                     className={styles.closeButton}
                     onClick={onClose}
                     aria-label="Close video"
@@ -200,7 +198,7 @@ const VideoModal = ({ video, onClose }) => {
                     {video.video_heading}
                 </h2>
                 <div className={styles.videoWrapper}>
-                    <iframe 
+                    <iframe
                         src={video.video_url}
                         width="100%"
                         height="100%"

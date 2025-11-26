@@ -6,6 +6,7 @@ import Burger from '../../assets/icons/burger.png'
 import Close from '../../assets/icons/close.png'
 import playLogo from '../../assets/icons/playLogo.svg'
 
+import showreel from '/src/assets/videoPreview/showreel.jpg'
 import vct_pacific from '/src/assets/videoPreview/riot.jpg'
 import koru_pharma from '/src/assets/videoPreview/koru-pharma.jpg'
 import vbi from '/src/assets/videoPreview/vbi.jpg'
@@ -22,8 +23,16 @@ import wonhwa2 from '/src/assets/videoPreview/wonhwa2.jpg'
 
 const videos_list = [
     {
+        id: 'showreel',
+        video_prev: showreel,
+        video_url: "https://player.vimeo.com/video/1108432715?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479",
+        video_heading: "Showreel 2025",
+        video_text: "Director / Video Editor / Videographer",
+        hasVideo: true
+    },
+    {
         id: 'vct-pacific',
-        video_prev : vct_pacific,
+        video_prev: vct_pacific,
         video_url: "https://www.youtube.com/embed/gp0TV-b1XaM?si=AvHn1fiqvy9ziTb_",
         video_heading: "VCT Pacific Trophy",
         video_text: "Video Editor",
@@ -109,7 +118,7 @@ const reels_list = [
         id: 'wonhwa1',
         video_prev: wonhwa1,
         video_url: 'https://player.vimeo.com/video/1122561736?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
-        video_heading: 'Beauty box promotion at London Hallyu Festival',
+        video_heading: 'London Hallyu Festival',
         video_text: 'Video Director / Video Editor',
         hasVideo: true
     },
@@ -117,7 +126,7 @@ const reels_list = [
         id: 'wonhwa2',
         video_prev: wonhwa2,
         video_url: 'https://player.vimeo.com/video/1122573461?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479',
-        video_heading: 'Beauty box promotion at London Hallyu Festival',
+        video_heading: 'London Hallyu Festival',
         video_text: 'Video Director / Videographer / Video Editor',
         hasVideo: true
     },
@@ -172,7 +181,7 @@ const VideoModal = ({ video, isReel, onClose }) => {
     };
 
     return (
-        <div 
+        <div
             className={styles.videoModalOverlay}
             onClick={handleBackdropClick}
             onKeyDown={handleKeyDown}
@@ -181,7 +190,7 @@ const VideoModal = ({ video, isReel, onClose }) => {
             aria-labelledby="video-modal-title"
         >
             <div className={`${styles.videoModalContent} ${isReel ? styles.reelModalContent : ''}`}>
-                <button 
+                <button
                     className={styles.closeButton}
                     onClick={onClose}
                     aria-label="Close video"
@@ -192,7 +201,7 @@ const VideoModal = ({ video, isReel, onClose }) => {
                     {video.video_heading}
                 </h2>
                 <div className={`${styles.videoWrapper} ${isReel ? styles.reelWrapper : ''}`}>
-                    <iframe 
+                    <iframe
                         src={video.video_url}
                         width="100%"
                         height="100%"
@@ -243,8 +252,8 @@ const VideoPage = () => {
             <div className={styles.header}>
                 <div className={styles.shadowBox}></div>
                 <h1 className={styles.headerTitle}>VIDEO PROJECTS</h1>
-                <div 
-                    className={styles.burger} 
+                <div
+                    className={styles.burger}
                     onClick={toggleMenu}
                     role="button"
                     tabIndex={0}
@@ -258,9 +267,9 @@ const VideoPage = () => {
                     <img src={Burger} alt="Burger menu" />
                 </div>
             </div>
-            
+
             <nav className={styles.subMenu} role="tablist">
-                <button 
+                <button
                     className={`${styles.tabButton} ${isActive === 'videos' ? styles.active : ''}`}
                     onClick={() => handleMenuClick('videos')}
                     role="tab"
@@ -268,7 +277,7 @@ const VideoPage = () => {
                 >
                     videos
                 </button>
-                <button 
+                <button
                     className={`${styles.tabButton} ${isActive === 'reels' ? styles.active : ''}`}
                     onClick={() => handleMenuClick('reels')}
                     role="tab"
@@ -277,7 +286,7 @@ const VideoPage = () => {
                     reels
                 </button>
             </nav>
-            
+
             <main className={styles.mainContent}>
                 <div className={isActive === 'reels' ? styles.reelsComponent : styles.videoComponent}>
                     {(isActive === 'reels' ? reels_list : videos_list).map((video) => (
