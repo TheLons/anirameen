@@ -13,6 +13,7 @@ import vbi from '/src/assets/videoPreview/vbi.jpg'
 import jhope from '/src/assets/videoPreview/jhope.jpg'
 import suidae from '/src/assets/videoPreview/suidae.jpg'
 import techlado from '/src/assets/videoPreview/techlado.jpg'
+import seoul_africa from '/src/assets/videoPreview/seoulafrica.jpg'
 
 import tatoo from '/src/assets/videoPreview/tattoo.jpg'
 import foundation from '/src/assets/videoPreview/foundation.jpg'
@@ -36,6 +37,14 @@ const videos_list = [
         video_url: "https://www.youtube.com/embed/gp0TV-b1XaM?si=AvHn1fiqvy9ziTb_",
         video_heading: "VCT Pacific Trophy",
         video_text: "Video Editor",
+        hasVideo: true
+    },
+    {
+        id: 'seoul-africa',
+        video_prev: seoul_africa,
+        video_url: "https://player.vimeo.com/video/1121853502?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+        video_heading: "Seoul Africa Festival",
+        video_text: "Director / Video Editor / Videographer",
         hasVideo: true
     },
     {
@@ -74,7 +83,7 @@ const videos_list = [
         id: 'techlado',
         video_prev: techlado,
         video_url: "https://player.vimeo.com/video/800079014?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
-        video_heading: "TechLado Project Example",
+        video_heading: "TechLado Show",
         video_text: "Video Editor",
         hasVideo: true
     },
